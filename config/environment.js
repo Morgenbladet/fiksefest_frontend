@@ -46,6 +46,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.APP.rootElement = "#fiksefest";
     ENV.REMOTE_HOST = 'https://fiksefest.herokuapp.com';
+    ENV.locationType = 'hash'
   }
 
   return ENV;
