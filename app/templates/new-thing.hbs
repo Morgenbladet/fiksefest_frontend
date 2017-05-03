@@ -1,0 +1,40 @@
+<form enctype="multipart/form-data"
+  method="post"
+  action="https://fiksefest.herokuapp.com/api/things"
+  class="new_thing">
+  <p>
+  <label>Bilde:</label>
+  <input type="file" name="thing[image]">
+  </p>
+
+  <p>
+  <label>Hva er det vi ser på bildet?</label>
+  <input name="thing[title]" placeholder="En skosåle? En skje? En øreplugg?">
+  </p>
+
+  <p>
+  <label>Hva er ødelagt? Hvordan skjedde det? Hva er historien bak?</label>
+  <textarea name="thing[description]" rows=7></textarea>
+  </p>
+
+  <p>
+  <label>Hva heter du?</label>
+  <input name="thing[owner]">
+  </p>
+
+  <p>
+  <label>Hva er e-postadressen din? (Vi gir ikke den til noen, men vi må kunne
+    kontakte deg dersom du vinner)</label>
+  <input type="email" name="thing[email]">
+  </p>
+
+  <p><small>Ved å sende inn dette skjemaet, godtar du at Morgenbladet kan bruke
+    bildet og historien bak til redaksjonelle formål.</small></p>
+
+
+  <p><strong>NB! Husk at det kan ta lang tid å laste opp en bildefil.</strong></p>
+
+  <button type="submit">Send inn tingen!</button>
+</form>
+
+{{link-to 'Avbryt, gå tilbake' 'things'}}

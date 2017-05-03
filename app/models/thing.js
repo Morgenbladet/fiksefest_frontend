@@ -4,5 +4,6 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   description: DS.attr('string'),
   owner: DS.attr('string'),
-  image: DS.attr()
+  imageLinks: DS.attr(),
+  image: DS.attr('file')
 });

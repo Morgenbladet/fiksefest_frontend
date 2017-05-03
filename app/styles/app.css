@@ -26,8 +26,9 @@ ul.things-index a {
 }
 
 #fiksefest-content button {
-  background: white;
+  background: rgba(230, 51, 34, 0.2); 
   border: 4px solid #e63334;
+  box-shadow: 2px 2px 1px 1px black;
   padding: 0.8em;
   font-size: larger;
   border-radius: 9px;
@@ -37,7 +38,12 @@ ul.things-index a {
 }
 
 #fiksefest-content button:hover {
-  background: rgba(230, 51, 35, 0.3);
+  background: rgba(230, 51, 35, 0.4);
+}
+
+#fiksefest-content button:active {
+  background: rgba(230, 51, 35, 0.4);
+  box-shadow: inset 1px 1px black, 2px 2px 1px 1px black;
 }
 
 #fiksefest-content .thing {
@@ -61,4 +67,25 @@ ul.things-index a {
   color: #333;
   font-size: small;
   font-style: italic;
+}
+
+#fiksefest-content form.new_thing label {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+
+#fiksefest-content form.new_thing textarea,
+#fiksefest-content form.new_thing input {
+  width: 90%;
+  max-width: 500px;
+  padding:12px;
+  border-radius: 4px;
+  border: 1px solid #e63334;
+  font-size: medium;
+}
+
+#fiksefest-content form.new_thing textarea:focus,
+#fiksefest-content form.new_thing input:focus {
+  box-shadow: inset 0 0 gold;
 }
