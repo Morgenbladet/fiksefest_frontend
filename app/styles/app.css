@@ -1,14 +1,26 @@
 ul.things-index {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 ul.things-index li {
   display: inline-block;
-  margin: 5px;
+  margin-left: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 0;
 }
 ul.things-index img {
-  width: 250px;
-  height: 250px;
+  width: 238px;
+  height: 238px;
 }
+ul.things-index a:hover img {
+  box-shadow: 0 0 2px 2px gold;
+}
+ul.things-index a {
+  box-shadow: none;
+}
+
 
 #fiksefest-content {
 }
@@ -19,9 +31,9 @@ ul.things-index img {
   padding: 0.8em;
   font-size: larger;
   border-radius: 9px;
-  margin: auto auto;
   display: block;
   text-align: center;
+  margin-bottom: 2em;
 }
 
 #fiksefest-content button:hover {
