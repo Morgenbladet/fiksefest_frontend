@@ -1,0 +1,12 @@
+<div class="thing" id="thing-{{model.id}}">
+  <h3>{{model.title}}</h3>
+
+  <img class="img thing-image-large" src="{{model.image.large}}">
+
+  <blockquote class="description">
+    <p>{{model.description}}</p>
+    <footer>Sendt inn av {{model.owner}}</footer>
+  </blockquote>
+
+  {{link-to 'Tilbake til tingene!' 'things'}}
+</div>

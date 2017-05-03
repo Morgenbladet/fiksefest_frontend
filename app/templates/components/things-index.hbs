@@ -1,0 +1,7 @@
+<button {{action "loadThings"}}>Hent flere!</button>
+
+<ul class="things-index">
+  {{#each things as |thing|}}
+    {{square-thing thing=thing}}
+  {{/each}}
+</ul>
