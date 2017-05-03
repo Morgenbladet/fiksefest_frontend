@@ -1,5 +1,6 @@
 <div class="thing" id="thing-{{model.id}}">
   <h3>{{model.title}}</h3>
+  <p>{{link-to 'Tilbake til tingene!' 'things'}}</p>
 
   <img class="img thing-image-large" src="{{model.image.large}}">
 
@@ -8,5 +9,4 @@
     <footer>Sendt inn av {{model.owner}}</footer>
   </blockquote>
 
-  {{link-to 'Tilbake til tingene!' 'things'}}
 </div>
