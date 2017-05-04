@@ -7,6 +7,7 @@ const { String: { pluralize, underscore } } = Ember;
 export default DS.JSONAPIAdapter.extend({
   namespace: 'api',
   host: ENV.REMOTE_HOST,
+  headers: { 'Accept': 'application/json' },
   pathForType(type) {
     return pluralize(underscore(type));
   }

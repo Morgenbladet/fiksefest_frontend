@@ -11,8 +11,8 @@ ul.things-index li {
   margin-top: 0;
 }
 ul.things-index img {
-  width: 238px;
-  height: 238px;
+  width: 234px;
+  height: 234px;
 }
 ul.things-index a:hover img {
   box-shadow: 0 0 2px 2px gold;
@@ -60,7 +60,6 @@ ul.things-index a {
 #fiksefest-content .thing blockquote {
   color: #333;
   font-size: larger;
-  font-style: italic;
 }
 
 #fiksefest-content .thing blockquote footer {
@@ -69,23 +68,44 @@ ul.things-index a {
   font-style: italic;
 }
 
-#fiksefest-content form.new_thing label {
+#fiksefest-content label {
   display: block;
   width: 100%;
   font-weight: bold;
 }
 
-#fiksefest-content form.new_thing textarea,
-#fiksefest-content form.new_thing input {
+#fiksefest-content textarea,
+#fiksefest-content input {
   width: 90%;
   max-width: 500px;
   padding:12px;
+  margin: 6px 0;
   border-radius: 4px;
   border: 1px solid #e63334;
   font-size: medium;
 }
 
-#fiksefest-content form.new_thing textarea:focus,
-#fiksefest-content form.new_thing input:focus {
+#fiksefest-content textarea:focus,
+#fiksefest-content input:focus {
   box-shadow: inset 0 0 gold;
 }
+
+ul.comments {
+	list-style-type: none;
+	padding: 0
+}
+
+ul.comments blockquote {
+	font-style: normal;
+	border-left: 4px solid rgba(230,51,35, 0.3);
+	padding-left: 1em;
+}
+
+ul.comments blockquote small {
+	color: #777;
+}
+
+ul.comments blockquote small::before {
+	content: "– "
+}
+

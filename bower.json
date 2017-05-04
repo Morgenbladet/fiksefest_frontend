@@ -1,0 +1,6 @@
+{
+  "name": "fiksefest-frontend",
+  "dependencies": {
+    "ember-cli-moment-shim": "0.0.3"
+  }
+}

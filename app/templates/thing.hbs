@@ -1,12 +1,34 @@
-<div class="thing" id="thing-{{model.id}}">
-  <h3>{{model.title}}</h3>
+<div class="thing" id="thing-{{model.thing.id}}">
+  <h2>{{model.thing.title}}</h2>
   <p>{{link-to 'Tilbake til tingene!' 'things'}}</p>
 
-  <img class="img thing-image-large" src="{{model.imageLinks.large}}">
+  <img class="img thing-image-large" src="{{model.thing.imageLinks.large}}">
 
   <blockquote class="description">
-    <p>{{model.description}}</p>
+    <p>{{simple-format model.thing.description}}</p>
     <footer>Sendt inn av {{model.owner}}</footer>
   </blockquote>
 
+
+  <h3>Kommentarer og tips</h3>
+  <ul class="comments">
+    {{#each model.thing.comments as |comment|}}
+      <li>
+        <blockquote>
+          {{simple-format comment.text}}
+          <small>
+            {{comment.name}} ({{moment-from-now comment.created_at date locale='nb'}})
+          </small>
+        </blockquote>
+      </li>
+    {{/each}}
+  </ul>
+
+  <div class="comment_form">
+    {{textarea value=model.new_comment.text placeholder="Kommentar" rows=6}}<br>
+    {{input value=model.new_comment.name placeholder="Navn"}}
+    {{input value=model.new_comment.email placeholder="E-postadresse (blir ikke vist)"}}
+    {{input value=model.new_comment.thing_id type="hidden"}}
+    <button type="submit" {{action 'saveComment' model.new_comment}}>Send inn!</button>
+  </div>
 </div>

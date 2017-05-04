@@ -5,5 +5,6 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   owner: DS.attr('string'),
   imageLinks: DS.attr(),
-  image: DS.attr('file')
+  image: DS.attr('file'),
+  comments: DS.hasMany('comment')
 });

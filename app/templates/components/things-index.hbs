@@ -1,4 +1,6 @@
-<button {{action "loadThings"}}>Hent nye!</button>
+<button {{action "loadThings"}}>Hent flere!</button>
+
+<p>{{link-to "Last opp din ødelagte ting!" "new_thing"}}</p>
 
 <ul class="things-index">
   {{#each things as |thing|}}
@@ -6,4 +8,3 @@
   {{/each}}
 </ul>
 
-<p>{{link-to "Last opp din ødelagte ting!" "new_thing"}}</p>
