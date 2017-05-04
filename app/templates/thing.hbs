@@ -10,12 +10,12 @@
   </blockquote>
 
 
-  <h3>Kommentarer og tips</h3>
+  <h3>Kom med tips til hvordan dette skal fikses!</h3>
   <ul class="comments">
     {{#each model.thing.comments as |comment|}}
       <li>
         <blockquote>
-          {{simple-format comment.text}}
+          {{simple-format comment.text autoLink="urls"}}
           <small>
             {{comment.name}} ({{moment-from-now comment.created_at date locale='nb'}})
           </small>
@@ -25,7 +25,6 @@
   </ul>
 
   <div class="comment_form">
-    <p>Kom med tips til hvordan dette skal fikses!</p>
     {{textarea value=model.new_comment.text placeholder="Kommentar" rows=6}}<br>
     {{input value=model.new_comment.name placeholder="Navn"}}
     {{input value=model.new_comment.email placeholder="E-postadresse (blir ikke vist)"}}
