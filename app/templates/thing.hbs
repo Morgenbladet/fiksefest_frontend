@@ -6,7 +6,7 @@
 
   <blockquote class="description">
     <p>{{simple-format model.thing.description}}</p>
-    <footer>Sendt inn av {{model.owner}}</footer>
+    <footer>Sendt inn av {{model.thing.owner}}</footer>
   </blockquote>
 
 
@@ -25,6 +25,7 @@
   </ul>
 
   <div class="comment_form">
+    <p>Kom med tips til hvordan dette skal fikses!</p>
     {{textarea value=model.new_comment.text placeholder="Kommentar" rows=6}}<br>
     {{input value=model.new_comment.name placeholder="Navn"}}
     {{input value=model.new_comment.email placeholder="E-postadresse (blir ikke vist)"}}

@@ -21,7 +21,9 @@ export default Ember.Route.extend({
       }
 
       function refresh() {
-        self.controller.get('model').thing.reload();
+        let thing = self.controller.get('model').thing;
+        thing.reload();
+        jQuery(".comment_form").hide();
       }
 
       newComment.thing_id = id;
