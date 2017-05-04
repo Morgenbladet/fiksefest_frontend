@@ -14,7 +14,7 @@ var autoLink = function (text, context) {
       var partialHTML = autoLinkUrls(text, context);
 
       for (let i = 0, len = partialHTML.length; i < len; i++) {
-        if (!(partialHTML[i] instanceof Ember.Handlebars.SafeString)) {
+        if (! Ember.String.isHTMLSafe(partialHTML[i])) {
           buffer = buffer.concat(autoLinkEmailAddresses(partialHTML[i]));
         } else {
           buffer.push(partialHTML[i]);
@@ -77,7 +77,7 @@ var autoLinkUrls = function (text, options) {
       }
       template += `>${url}</a>`;
 
-      html.push(new Ember.Handlebars.SafeString(template));
+      html.push(Ember.String.htmlSafe(template));
     }
   }
 
@@ -102,7 +102,7 @@ var autoLinkEmailAddresses = function (text) {
     text = text.slice(address.length);
 
     if (!isAutoLinked(part, parts[0])) {
-      html.push(new Ember.Handlebars.SafeString(`<a href="mailto:${address}">${address}</a>`));
+      html.push(Ember.String.htmlSafe(`<a href="mailto:${address}">${address}</a>`));
     }
   }
 
@@ -191,7 +191,7 @@ export function simpleFormat (params, hash) {
   }
   text = paragraphs.join('\n\n');
 
-  return new Ember.Handlebars.SafeString(text);
+  return Ember.String.htmlSafe(text);
 }
 
 export default Ember.Helper.helper(simpleFormat);

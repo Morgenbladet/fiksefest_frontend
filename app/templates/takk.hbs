@@ -1,4 +1,4 @@
-<h2>Takk for ditt bidrag!</h2>
+<h2 id="begin">Takk for ditt bidrag!</h2>
 
 {{link-to 'Tilbake til fiksefesten' 'things'}}
 
@@ -11,3 +11,8 @@ hjelpe noen andre ved å legge igjen en kommentar?</p>
 
 <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmorgenbladet.no%2Ffiksefest&layout=button&size=large&mobile_iframe=true&appId=491796074316613&width=73&height=28" width="73" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
+<script>
+  Ember.$(function() {
+    Ember.$('html, body').scrollTop(Ember.$("#begin").offset().top);
+  });
+</script>

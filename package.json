@@ -38,6 +38,7 @@
     "ember-data": "^2.13.0",
     "ember-data-save-relationships": "0.0.5",
     "ember-export-application-global": "^2.0.0",
+    "ember-infinity": "^0.2.8",
     "ember-load-initializers": "^1.0.0",
     "ember-moment": "^7.3.0",
     "ember-resolver": "^4.0.0",

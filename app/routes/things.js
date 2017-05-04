@@ -1,13 +1,8 @@
 import Ember from 'ember';
+import InfinityRoute from "ember-infinity/mixins/route";
 
-export default Ember.Route.extend({
-  model(params) {
-    let things = this.store.peekAll('thing');
-    if (things.get('length') == 0 || params.reload) {
-      this.store.unloadAll();
-      return this.store.findAll('thing');
-    } else {
-      return this.store.peekAll('thing');
-    }
+export default Ember.Route.extend(InfinityRoute, {
+  model() {
+    return this.infinityModel("thing", { perPage: 3, startingPage: 1, include: 'comments' });
   }
 });

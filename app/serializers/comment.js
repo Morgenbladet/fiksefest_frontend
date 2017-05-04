@@ -1,6 +1,7 @@
 import DS from 'ember-data';
+import Application from './application';
 
-export default DS.JSONAPISerializer.extend(DS.EmbeddedRecordsMixin, {
+export default Application.extend({
   attrs: {
     thing: { serialize: false }
   }
