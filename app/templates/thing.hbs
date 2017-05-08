@@ -24,6 +24,7 @@
     {{/each}}
   </ul>
 
+
   <div class="comment_form">
     {{textarea value=model.new_comment.text placeholder="Kommentar" rows=6}}<br>
     {{input value=model.new_comment.name placeholder="Navn"}}
@@ -31,6 +32,8 @@
     {{input value=model.new_comment.thing_id type="hidden"}}
     <button type="submit" {{action 'saveComment' model.new_comment}}>Send inn!</button>
   </div>
+
+  <p>{{link-to 'Tilbake til oversikten' 'things'}}</p>
 
   <script>
     Ember.$(function() {
