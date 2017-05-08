@@ -108,3 +108,8 @@ ul.comments blockquote small::before {
 	content: "– "
 }
 
+.infinity-loader {
+  font-style: italic;
+  color: #999;
+}
+
