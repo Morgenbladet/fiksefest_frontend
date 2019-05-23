@@ -15,7 +15,7 @@
     {{#each model.thing.comments as |comment|}}
       <li>
         <blockquote>
-          {{simple-format comment.text autoLink="urls"}}
+          {{simple-format comment.text}}
           <small>
             {{comment.name}} ({{moment-from-now comment.created_at date locale='nb'}})
           </small>
